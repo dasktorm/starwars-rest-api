@@ -1,0 +1,31 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+flask = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+flask-bcrypt = "*"
+flask-jwt-extended = "*"
+flask-mail = "*"
+flask-cors = "*"
+python-dotenv = "*"
+datetime = "*"
+cloudinary = "*"
+flask-socketio = "*"
+requests = "*"
+
+[requires]
+python_version = "*"
+
+[scripts]
+start = "flask --app api/app.py run --host=0.0.0.0 --port=10000"
+build = "cd app && npm install && npm run build && cd .. && pipenv install"
+init = "flask db init"
+migrate = "flask db migrate"
+upgrade = "flask db upgrade"
+downgrade = "flask db downgrade"
